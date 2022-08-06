@@ -57,8 +57,8 @@ def populate_bond_allocation():
     BondAllocation = db.Table('BondAllocation', metadata, autoload=True, autoload_with=engine)
     allocations = [(1, 0, 0.85), (1, 1, 0.10), (1, 2, 0.05), 
                    (2, 0, 0.75), (2, 1, 0.15), (2, 2, 0.10),
-                   (3, 0, 0.65), (2, 1, 0.20), (2, 2, 0.15),
-                   (4, 0, 0.55), (2, 1, 0.25), (2, 2, 0.20)]
+                   (3, 0, 0.65), (3, 1, 0.20), (3, 2, 0.15),
+                   (4, 0, 0.55), (4, 1, 0.25), (4, 2, 0.20)]
     for allocation_id, (risk_tolerance_id, bond_risk_category_id, allocation) in enumerate(allocations):
         engine.execute(insert(BondAllocation).values(BondAllocationId=allocation_id,
                                                      RiskToleranceId=risk_tolerance_id,
