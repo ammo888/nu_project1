@@ -1,0 +1,44 @@
+FundCategory as fc
+---
+FundCategoryId PK int
+Category varchar(20) UNIQUE
+
+EquityRiskCategory as erc
+---
+EquityRiskCategoryId PK int
+Category varchar(20) UNIQUE
+
+BondRiskCategory as brc
+---
+BondRiskCategoryId PK int
+Category varchar(20) UNIQUE
+
+RiskTolerance as rt
+---
+RiskToleranceId PK int
+
+ETF
+---
+Symbol PK varchar(20)
+FundCategoryId int FK >- fc.FundCategoryId
+Sharpe float
+Beta float
+IsReit boolean
+IsEsg boolean
+IsInternational boolean
+EquityRiskCategoryId int FK >- erc.EquityRiskCategoryId
+BondRiskCategoryId int FK >- brc.BondRiskCategoryId
+
+EquityAllocation
+---
+EquityAllocationId PK int
+RiskToleranceId int FK >- rt.RiskToleranceId
+EquityRiskCategoryId int FK >- erc.EquityRiskCategoryId
+Allocation float
+
+BondAllocation
+---
+BondAllocationId PK int
+RiskToleranceId int FK >- rt.RiskToleranceId
+BondRiskCategoryId int FK >- brc.BondRiskCategoryId
+Allocation float
