@@ -19,6 +19,12 @@ The tool takes into consideration following factors:
  Based on the answers given to the above questions, the tool starts filtering out assets from our database leaving the most suitable choices for further consideration. The main goal for the advisor is to build a reasonable portfolio which balances risk vs. reward by taking into account the client's needs.    
 
 # Limitations and future development
+Due to the time limitation, we were not able include factors that play a big role in making an even better investment decision. Such factors are:
+Job position, salary
+Student loans 
+Willingness to make monthly/annual contributions
+Number of dependents
+
 
 
 # Data pre-processing 
