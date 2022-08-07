@@ -33,24 +33,27 @@ Number of dependents
 
 
 # Usage and installation instructions of libraries/tools that are used
-Pandas 
-Csv 
-Numpy
-Path
-Matplotlib 
-Sqlalchemy
+    Pandas 
+    Csv 
+    Numpy
+    Path
+    Matplotlib 
+    Sqlalchemy
+
+
+# Additional explanations
 
 
 # References used
-https://smartasset.com/investing/asset-allocation-calculator#dGIetOVSrl
-https://www.optimizedportfolio.com/asset-allocation/#asset-allocation-by-age-calculation
-https://www.kaggle.com/datasets/stefanoleone992/mutual-funds-and-etfs
+    https://smartasset.com/investing/asset-allocation-calculator#dGIetOVSrl
+    https://www.optimizedportfolio.com/asset-allocation/#asset-allocation-by-age-calculation
+    https://www.kaggle.com/datasets/stefanoleone992/mutual-funds-and-etfs
 
 
 # Team members:
-Minh
-Drew
-Alejandro 
-Bek
+    Minh
+    Drew
+    Alejandro 
+    Bek
 
 
