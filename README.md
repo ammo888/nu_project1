@@ -14,7 +14,7 @@ The tool takes into consideration following factors:
     What would you do if the market went up 10% in Month 1 and moved down 10% in Month 2? 
     (1 = Sold, 2 = Held Steady, 3 = Bought More, 4 = Bought more and hoped for further declines
 
-    Willingness to invest in foreign markets, ESG’s, emerging economies,  Crypto, REIT’s
+    Willingness to invest in foreign markets, emerging economies, crypto, REIT’s
     
  Based on the answers given to the above questions, the tool starts filtering out assets from our database leaving the most suitable choices for further consideration. The main goal for the advisor is to build a reasonable portfolio which balances risk vs. reward by taking into account the client's needs.    
 
@@ -43,7 +43,7 @@ Due to the time limitation, we were not able include factors that play a big rol
 
 
 ### Additional explanations
-Initially, we wanted to focus on creating simple ETF portfolios. However, after a multiple team discussions, we decided to include crypto and bond in order to make it a bit more realistic.
+Initially, we wanted to focus on creating simple ETF portfolios. However, after a multiple team discussions, we decided to include crypto and bonds in order to make it a bit more 
 
 ### References used
     https://smartasset.com/investing/asset-allocation-calculator#dGIetOVSrl
