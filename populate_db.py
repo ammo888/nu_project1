@@ -42,7 +42,7 @@ def populate_fund_category():
 def populate_bond_risk_category():
     print("Populating BondRiskCategory")
     BondRiskCategory = db.Table('BondRiskCategory', metadata, autoload=True, autoload_with=engine)
-    for category_id, category in enumerate(["LOW_RISK", "MID_RISK", "HIGH_RISK"]):
+    for category_id, category in enumerate(["NONE", "LOW_RISK", "MID_RISK", "HIGH_RISK"]):
         engine.execute(insert(BondRiskCategory).values(BondRiskCategoryId=category_id, Category=category).on_conflict_do_nothing())
 
 # BOND ALLOCATION
@@ -55,10 +55,10 @@ def populate_bond_risk_category():
 def populate_bond_allocation():
     print("Populating BondAllocation")
     BondAllocation = db.Table('BondAllocation', metadata, autoload=True, autoload_with=engine)
-    allocations = [(1, 0, 0.85), (1, 1, 0.10), (1, 2, 0.05), 
-                   (2, 0, 0.75), (2, 1, 0.15), (2, 2, 0.10),
-                   (3, 0, 0.65), (3, 1, 0.20), (3, 2, 0.15),
-                   (4, 0, 0.55), (4, 1, 0.25), (4, 2, 0.20)]
+    allocations = [(1, 1, 0.85), (1, 2, 0.10), (1, 3, 0.05), 
+                   (2, 1, 0.75), (2, 2, 0.15), (2, 3, 0.10),
+                   (3, 1, 0.65), (3, 2, 0.20), (3, 3, 0.15),
+                   (4, 1, 0.55), (4, 2, 0.25), (4, 3, 0.20)]
     for allocation_id, (risk_tolerance_id, bond_risk_category_id, allocation) in enumerate(allocations):
         engine.execute(insert(BondAllocation).values(BondAllocationId=allocation_id,
                                                      RiskToleranceId=risk_tolerance_id,
@@ -70,7 +70,7 @@ def populate_bond_allocation():
 def populate_equity_risk_category():
     print("Populating EquityRiskCategory")
     EquityRiskCategory = db.Table('EquityRiskCategory', metadata, autoload=True, autoload_with=engine)
-    for category_id, category in enumerate(["LOW", "LOW_MEDIUM", "MEDIUM", "MEDIUM_HIGH", "HIGH"]):
+    for category_id, category in enumerate(["NONE", "LOW", "LOW_MEDIUM", "MEDIUM", "MEDIUM_HIGH", "HIGH"]):
         engine.execute(insert(EquityRiskCategory).values(EquityRiskCategoryId=category_id, Category=category).on_conflict_do_nothing())
 
 # EQUITY ALLOCATION
@@ -83,10 +83,10 @@ def populate_equity_risk_category():
 def populate_equity_allocation():
     print("Populating EquityAllocation")
     EquityAllocation = db.Table('EquityAllocation', metadata, autoload=True, autoload_with=engine)
-    allocations = [(1, 0, 0.40), (1, 1, 0.30), (1, 2, 0.20), (1, 3, 0.05), (1, 4, 0.05),
-                   (2, 0, 0.20), (2, 1, 0.40), (2, 2, 0.20), (2, 3, 0.10), (2, 4, 0.10),
-                   (3, 0, 0.10), (3, 1, 0.10), (3, 2, 0.20), (3, 3, 0.40), (3, 4, 0.20),
-                   (4, 0, 0.05), (4, 1, 0.05), (4, 2, 0.20), (4, 3, 0.30), (4, 4, 0.40)]
+    allocations = [(1, 1, 0.40), (1, 2, 0.30), (1, 3, 0.20), (1, 4, 0.05), (1, 5, 0.05),
+                   (2, 1, 0.20), (2, 2, 0.40), (2, 3, 0.20), (2, 4, 0.10), (2, 5, 0.10),
+                   (3, 1, 0.10), (3, 2, 0.10), (3, 3, 0.20), (3, 4, 0.40), (3, 5, 0.20),
+                   (4, 1, 0.05), (4, 2, 0.05), (4, 3, 0.20), (4, 4, 0.30), (4, 5, 0.40)]
     for allocation_id, (risk_tolerance_id, equity_risk_category_id, allocation) in enumerate(allocations):
         engine.execute(insert(EquityAllocation).values(EquityAllocationId=allocation_id,
                                                        RiskToleranceId=risk_tolerance_id,
