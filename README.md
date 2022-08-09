@@ -20,7 +20,8 @@ Based on the answers given to the above questions, the tool starts filtering out
 
     Create a PostgresSQL database named “nu_project1” using your favorite method.
 
-    Run this script to perform the preprocessing step - if your postgresl username/password is not “postgres” you have to edit the db url in populate_db.py correspondingly:
+    Run this script to perform the preprocessing step - if your postgresl 
+    username/password is not “postgres” you have to edit the db url in populate_db.py correspondingly:
     python populate_db.py
 
     To run the portfolio recommender, run:
@@ -28,15 +29,15 @@ Based on the answers given to the above questions, the tool starts filtering out
 
 
 ## Limitations and future development
-    There were several limitations to our project. Amongst these was a lack of extensive time. Given more time we would have expanded the model even further and added more features to it. We would have added a function that would allow an input user to create a portfolio centered around ESG investing incentives. Additionally, we would have added more cryptocurrencies to choose from.
+There were several limitations to our project. Amongst these was a lack of extensive time. Given more time we would have expanded the model even further and added more features to it. We would have added a function that would allow an input user to create a portfolio centered around ESG investing incentives. Additionally, we would have added more cryptocurrencies to choose from.
 
-    Due to the limited time, we were not able to include factors that play a big role in making an even better investment decision, such as: job position, disposable income, student loans, willingness for regular versus one-time contributions, number of dependents, city of residence, post-retirement goals, etc.
+Due to the limited time, we were not able to include factors that play a big role in making an even better investment decision, such as: job position, disposable income, student loans, willingness for regular versus one-time contributions, number of dependents, city of residence, post-retirement goals, etc.
 
-    We also would have liked to have been able to write a more complex, nonlinear function to calculate our stock-to-bond allocation percentages. Additionally, a more rigorously calculated selection and allocation of equity and bond baskets would’ve improved portfolio performance.
+We also would have liked to have been able to write a more complex, nonlinear function to calculate our stock-to-bond allocation percentages. Additionally, a more rigorously calculated selection and allocation of equity and bond baskets would’ve improved portfolio performance.
 
-    Additional analysis can be done to show more statistics on the portfolio, as well as simulations.
+Additional analysis can be done to show more statistics on the portfolio, as well as simulations.
 
-    Generally, we had to make “arbitrary” decisions for ETF selection based on our best judgment, and each of those decisions can be reevaluated and given more research to improve robustness.
+Generally, we had to make “arbitrary” decisions for ETF selection based on our best judgment, and each of those decisions can be reevaluated and given more research to improve robustness.
 
 ## Data pre-processing
 A large part of our project was filtering out the correct data in order to fit it into a database with which we could create portfolios with. This was a multi-step process. We decided as a group that we only wanted to select ETFs that have developed an extensive track record over a longer period of time. Since ETFs are created every day, we chose to exclude those with which there wasn’t much price history. From this, we filtered out every ETF that didn’t have a minimum of five years of existence. In addition to this, we decided that since we are focusing on portfolio management, we are only suggesting products that are meant to be bought and held for a minimum time period of multiple years. This eliminated ETFs that were more short-term trade oriented such as leveraged ETFs, inverse ETFs, ultrashort ETFs. Once these steps were completed we had a general sense of the ETFs that would be included in the basket. 
