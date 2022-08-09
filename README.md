@@ -1,31 +1,36 @@
- 
+# Portfolio Recommender 
 ## Project overview
-The basis of our project is to create an algorithm that acts as a robo-financial-advisor. Our goal is to have an input user answer a series of questions and then use our algorithm to push out a portfolio of various ETFs. Our algorithm takes into account typical financial advising factors such as age, risk tolerance, and asset allocation preferences. From these preferences our algorithm will push out a portfolio of specific ETFs and list what each ETF allocation should consist of. 
+The basis of our project is to create an algorithm that acts as a robo-financial-advisor. Our goal is to have an input user answer a series of questions and then use our algorithm to push out a portfolio of various ETFs. Our algorithm takes into account typical financial advising factors such as age, risk tolerance, and asset allocation preferences. From these preferences our algorithm will push out a portfolio of specific ETFs and list what each ETF allocation should consist of. Our portfolio construction tool is designed for users who are 18 and over years of age. 
+
 Our questionnaire focused on the following areas:
-    Age
 
-    Risk Tolerance
+- Age (18-100 years old)
 
-    Willingness to invest in foreign markets, emerging economies, crypto, REIT’s
+- Risk Tolerance
+
+- Willingness to invest in foreign markets, emerging economies, crypto, REIT’s
  
 Based on the answers given to the above questions, the tool starts filtering out assets from our database leaving the most suitable choices for further consideration. The main goal for the advisor is to build a reasonable portfolio which balances risk vs. reward by taking into account the client's needs.
 
 ## Installation
-    Prerequisites:
-    conda
-    python3.7.13 or higher
+Prerequisites:
+conda
+python3.7.13 or higher
 
-    conda create --name portfolio_recommender --file requirements.txt
-    conda activate portfolio_recommender
+- `conda create --name portfolio_recommender --file requirements.txt`
 
-    Create a PostgresSQL database named “nu_project1” using your favorite method.
+- `conda activate portfolio_recommender`
 
-    Run this script to perform the preprocessing step - if your postgresl 
-    username/password is not “postgres” you have to edit the db url in populate_db.py correspondingly:
-    python populate_db.py
+Create a PostgreSQL database named `nu_project1` using your favorite method.
 
-    To run the portfolio recommender, run:
-    python portfolio_recommender.py
+Run this script to perform the preprocessing step - if your postgres 
+username/password is not `postgres` you have to edit the db url in populate_db.py correspondingly:
+
+`python populate_db.py`
+
+To run the portfolio recommender, run:
+
+`python portfolio_recommender.py`
 
 
 ## Limitations and future development
@@ -60,7 +65,8 @@ From the above data cleaning, we created baskets that will make up the entire ex
     Numpy
     Path
     Matplotlib 
-    Sqlalchemy
+    Sqlalchemy 
+    Questionary 
  
 ## Additional explanations
 A major part of portfolio optimization is determining the allocation of different asset classes within a portfolio. The most basic form of this is determining the allocation of assets into equities and bonds. We have decided to implement this allocation into our portfolio, while also giving the input user a choice to add allocation exposure to foreign equity ETFs, real estate ETFs, and cryptocurrencies. The role of a portfolio advisor is  to calculate the proper allocation percentage to each asset class. Their are several factors that go into determining allocation percentages such as age, risk tolerance, and investing goals. For our model, we lean heavy into the age and risk tolerance input factors. 
@@ -90,7 +96,6 @@ Once we have exposures to the asset classes we need to determine the individual 
 
 ## Examples 
 ### Scenario 1 
-(insert images titled 54_year_old_ex_1_3 & 25_year_old_ex_1_3)  
 For this example we have two users, one being 25 years old and another being 54 years old. We assumed that both want crypto-currencies in their portfolio and have a risk appetite of 3 
 As per the pie chart and allocation we can see how our functions work in order to provide a unique allocation for each user: 
 The 25 year-old has an allocation of 
@@ -107,7 +112,6 @@ Crypto: 1.36%
 ![](Images/25_year_old_ex_1_3.png)
 
 ### Scenario 2 
-(insert images titled 30_year_old_ex_2_4 & 3-_year_old_ex_2_1) 
 Our second example we will standardize age at 30 years old but differing risk appetites - A 30 year old with risk appetite of 1 which is the most risk averse against a risk tolerance of 4 which is the highest risk profile available 
 having a risk tolerance of 1 outputs an allocation of:
 Stocks : 56.76%
@@ -124,13 +128,13 @@ Crypto: 4.95%
 
 
 ## References used
-    https://smartasset.com/investing/asset-allocation-calculator#dGIetOVSrl
-    https://www.optimizedportfolio.com/asset-allocation/#asset-allocation-by-age-calculation
-    https://www.kaggle.com/datasets/stefanoleone992/mutual-funds-and-etfs
-    
-## Team members:
-    Minh
-    Drew
-    Alejandro 
-    Bek
+- https://smartasset.com/investing/asset-allocation-calculator#dGIetOVSrl
+- https://www.optimizedportfolio.com/asset-allocation/#asset-allocation-by-age-calculation
+- https://www.kaggle.com/datasets/stefanoleone992/mutual-funds-and-etfs
+
+## Team members
+- Minh Nguyen
+- Drew Haggerty
+- Alejandro Palacios
+- Bek Davronov
 
