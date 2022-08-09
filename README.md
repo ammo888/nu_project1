@@ -90,33 +90,33 @@ Once we have exposures to the asset classes we need to determine the individual 
 
 ## Examples 
 ### Scenario 1 
-    (insert images titled 54_year_old_ex_1_3 & 25_year_old_ex_1_3)  
-    For this example we have two users, one being 25 years old and another being 54 years old. We assumed that both want crypto-currencies in their portfolio and have a risk appetite of 3 
-    As per the pie chart and allocation we can see how our functions work in order to provide a unique allocation for each user: 
-    The 25 year-old has an allocation of 
-    Stocks : 79.29%
-    Bonds: 17.0%
-    Crypto: 3.71% 
-    On the other hand the 54 year old will have an allocation of Allocation:
-    Stocks : 52.64%
-    Bonds: 46.00%
-    Crypto: 1.36%
+(insert images titled 54_year_old_ex_1_3 & 25_year_old_ex_1_3)  
+For this example we have two users, one being 25 years old and another being 54 years old. We assumed that both want crypto-currencies in their portfolio and have a risk appetite of 3 
+As per the pie chart and allocation we can see how our functions work in order to provide a unique allocation for each user: 
+The 25 year-old has an allocation of 
+Stocks : 79.29%
+Bonds: 17.0%
+Crypto: 3.71% 
+On the other hand the 54 year old will have an allocation of Allocation:
+Stocks : 52.64%
+Bonds: 46.00%
+Crypto: 1.36%
 
 ![](Images/3-_year_old_ex_2_1.png)
 
 ![](Images/25_year_old_ex_1_3.png)
 
 ### Scenario 2 
-    (insert images titled 30_year_old_ex_2_4 & 3-_year_old_ex_2_1) 
-    Our second example we will standardize age at 30 years old but differing risk appetites - A 30 year old with risk appetite of 1 which is the most risk averse against a risk tolerance of 4 which is the highest risk profile available 
-    having a risk tolerance of 1 outputs an allocation of:
-    Stocks : 56.76%
-    Bonds: 42.00%
-    Crypto: 1.24%
-    With a risk tolerance of 4 we get an allocation of:
-    Stocks : 83.05%
-    Bonds: 12.0%
-    Crypto: 4.95%
+(insert images titled 30_year_old_ex_2_4 & 3-_year_old_ex_2_1) 
+Our second example we will standardize age at 30 years old but differing risk appetites - A 30 year old with risk appetite of 1 which is the most risk averse against a risk tolerance of 4 which is the highest risk profile available 
+having a risk tolerance of 1 outputs an allocation of:
+Stocks : 56.76%
+Bonds: 42.00%
+Crypto: 1.24%
+With a risk tolerance of 4 we get an allocation of:
+Stocks : 83.05%
+Bonds: 12.0%
+Crypto: 4.95%
 
 ![](Images/30_year_old_ex_2_4.png)
 
