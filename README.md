@@ -1,5 +1,5 @@
  
-### Project overview
+## Project overview
 The basis of our project is to create an algorithm that acts as a robo-financial-advisor. Our goal is to have an input user answer a series of questions and then use our algorithm to push out a portfolio of various ETFs. Our algorithm takes into account typical financial advising factors such as age, risk tolerance, and asset allocation preferences. From these preferences our algorithm will push out a portfolio of specific ETFs and list what each ETF allocation should consist of. 
 Our questionnaire focused on the following areas:
     Age
@@ -10,7 +10,7 @@ Our questionnaire focused on the following areas:
  
 Based on the answers given to the above questions, the tool starts filtering out assets from our database leaving the most suitable choices for further consideration. The main goal for the advisor is to build a reasonable portfolio which balances risk vs. reward by taking into account the client's needs.
 
-### Installation
+## Installation
     Prerequisites:
     conda
     python3.7.13 or higher
@@ -27,7 +27,7 @@ Based on the answers given to the above questions, the tool starts filtering out
     python portfolio_recommender.py
 
 
-### Limitations and future development
+## Limitations and future development
     There were several limitations to our project. Amongst these was a lack of extensive time. Given more time we would have expanded the model even further and added more features to it. We would have added a function that would allow an input user to create a portfolio centered around ESG investing incentives. Additionally, we would have added more cryptocurrencies to choose from.
 
     Due to the limited time, we were not able to include factors that play a big role in making an even better investment decision, such as: job position, disposable income, student loans, willingness for regular versus one-time contributions, number of dependents, city of residence, post-retirement goals, etc.
@@ -38,7 +38,7 @@ Based on the answers given to the above questions, the tool starts filtering out
 
     Generally, we had to make “arbitrary” decisions for ETF selection based on our best judgment, and each of those decisions can be reevaluated and given more research to improve robustness.
 
-### Data pre-processing
+## Data pre-processing
 A large part of our project was filtering out the correct data in order to fit it into a database with which we could create portfolios with. This was a multi-step process. We decided as a group that we only wanted to select ETFs that have developed an extensive track record over a longer period of time. Since ETFs are created every day, we chose to exclude those with which there wasn’t much price history. From this, we filtered out every ETF that didn’t have a minimum of five years of existence. In addition to this, we decided that since we are focusing on portfolio management, we are only suggesting products that are meant to be bought and held for a minimum time period of multiple years. This eliminated ETFs that were more short-term trade oriented such as leveraged ETFs, inverse ETFs, ultrashort ETFs. Once these steps were completed we had a general sense of the ETFs that would be included in the basket. 
 
 The next step in our portfolio selection process was to divide the ETF’s into their special interest categories. The basis of our project is to have a consumer insert their list of investing desires, and we would then push back a portfolio that meets their needs. Among these potential needs are a desire to invest in foreign equities, real estate vehicles, cryptocurrencies, as well as stocks and bonds. From our previous broad-based basket, we separated our ETF’s into these special interests groups. From this, we created a basket of ETFs that included Equity ETFs, Bond ETFs, Foreign Equity ETFs, and Real Estate ETFs. 
@@ -52,8 +52,8 @@ For our bond ETF risk determinants, we broke the bond ETFs into three separate c
 From the above data cleaning, we created baskets that will make up the entire exposure of an input user’s desired investment goals. This will give the input user a portfolio that meets their investing goals. 
 
  
-### Usage and installation instructions of libraries/tools that are used
-For this project we used the following list of libraries:
+## Usage and installation instructions of libraries/tools that are used
+### For this project we used the following list of libraries:
     Pandas 
     Csv 
     Numpy
@@ -61,7 +61,7 @@ For this project we used the following list of libraries:
     Matplotlib 
     Sqlalchemy
  
-### Additional explanations
+## Additional explanations
 A major part of portfolio optimization is determining the allocation of different asset classes within a portfolio. The most basic form of this is determining the allocation of assets into equities and bonds. We have decided to implement this allocation into our portfolio, while also giving the input user a choice to add allocation exposure to foreign equity ETFs, real estate ETFs, and cryptocurrencies. The role of a portfolio advisor is  to calculate the proper allocation percentage to each asset class. Their are several factors that go into determining allocation percentages such as age, risk tolerance, and investing goals. For our model, we lean heavy into the age and risk tolerance input factors. 
 The first major allocation to determine is the equity-to-bond allocation percentage. To determine this we took the age and risk tolerance of the input user. The following function allows for the calculation of equity-to-bond allocation:
 
@@ -87,8 +87,9 @@ The purple lines represent the percentage amount of crypto exposure based on ris
 
 Once we have exposures to the asset classes we need to determine the individual ETF exposures. We determined that each portfolio would have a select number of ETFs from each asset class. We decided that we would select ten equities to be put into each equity exposure basket. These ten ETFs would be determined based on which ETFs had the highest “Sharpe Ratio” over the past five years. For foreign equities, we determined that exposure would come from a basket of fifteen ETFs. This larger basket is due to the fact that foreign equities are much riskier and volatile than domestic equities, so risk needs to be spread out wider. Once again, the fifteen ETF’s from this basket were determined by which ETFs had the highest “Sharpe Ratio” over the previous five years. For real estate ETF exposure, we drew upon a basket of seven ETFs. There are not that many ETFs in this space and we believe this number will represent a good amount of exposure to this area. The basket of which individual ETFs was determined by choosing the ETFs that had the highest “Sharpe Ratio” performance over the previous five years.
 
-### Examples 
-Scenario 1 (insert images titled 54_year_old_ex_1_3 & 25_year_old_ex_1_3)  
+## Examples 
+### Scenario 1 
+    (insert images titled 54_year_old_ex_1_3 & 25_year_old_ex_1_3)  
     For this example we have two users, one being 25 years old and another being 54 years old. We assumed that both want crypto-currencies in their portfolio and have a risk appetite of 3 
     As per the pie chart and allocation we can see how our functions work in order to provide a unique allocation for each user: 
     The 25 year-old has an allocation of 
@@ -104,7 +105,8 @@ Scenario 1 (insert images titled 54_year_old_ex_1_3 & 25_year_old_ex_1_3)
 
 ![](Images/25_year_old_ex_1_3.png)
 
-Scenario 2 (insert images titled 30_year_old_ex_2_4 & 3-_year_old_ex_2_1) 
+### Scenario 2 
+    (insert images titled 30_year_old_ex_2_4 & 3-_year_old_ex_2_1) 
     Our second example we will standardize age at 30 years old but differing risk appetites - A 30 year old with risk appetite of 1 which is the most risk averse against a risk tolerance of 4 which is the highest risk profile available 
     having a risk tolerance of 1 outputs an allocation of:
     Stocks : 56.76%
@@ -119,16 +121,13 @@ Scenario 2 (insert images titled 30_year_old_ex_2_4 & 3-_year_old_ex_2_1)
 
 ![](Images/54_year_old_ex_1_3.png)
 
-Risk Parameters:
-    Sharpe=1.121031102595596
-    Beta=0.6573905982064289
 
-### References used
+## References used
     https://smartasset.com/investing/asset-allocation-calculator#dGIetOVSrl
     https://www.optimizedportfolio.com/asset-allocation/#asset-allocation-by-age-calculation
     https://www.kaggle.com/datasets/stefanoleone992/mutual-funds-and-etfs
     
-### Team members:
+## Team members:
     Minh
     Drew
     Alejandro 
