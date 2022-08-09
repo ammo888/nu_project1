@@ -39,12 +39,11 @@ From the above data cleaning, we created baskets that will make up the entire ex
 A major part of portfolio optimization is determining the allocation of different asset classes within a portfolio. The most basic form of this is determining the allocation of assets into equities and bonds. We have decided to implement this allocation into our portfolio, while also giving the input user a choice to add allocation exposure to foreign equity ETFs, real estate ETFs, and cryptocurrencies. The role of a portfolio advisor is  to calculate the proper allocation percentage to each asset class. Their are several factors that go into determining allocation percentages such as age, risk tolerance, and investing goals. For our model, we lean heavy into the age and risk tolerance input factors. 
 The first major allocation to determine is the equity-to-bond allocation percentage. To determine this we took the age and risk tolerance of the input user. The following function allows for the calculation of equity-to-bond allocation:
 
-![](../Capture.PNG)
-
+![](Capture.PNG)
 
 The function where “r” is the risk tolerance level and x is the input user’s age will give the proper equity-to-bond exposure. Our model takes into account four separate risk categories. Based on this, an input user will have a equity-to-bond exposure somewhere along this function line:
 
-![](../Capture2.PNG)
+![](Capture2.PNG)
 
 The x-axis in this chart is the input-users age and the y-axis is the input user’s exposure to bonds. As the user increases in age the less exposure they need to equities. The shades of blue in the diagram are dependent upon the risk tolerance of the input user. The more risk-seeking they are, the more exposure to equities they will have. 
  
